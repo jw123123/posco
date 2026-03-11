@@ -8,15 +8,18 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/common_rwd.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/lenis.min.js"></script> 
+  <!-- .min -> 프로덕트 버전으로 한줄로 나옴 -->
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </head>
 
-<body class="dark-mode bg">
+<body>
   <!-- h1.logo>a>span.sound-only>현대첨단소재(영어) / nav#hd-gnb>ol.hd-gnb>li.depth1>a+ul.depth2>li>a -->
   <!-- 모바일 더보기 창 = inline 처리하면 됨 -->
-  <header id="hd-header">
+  <header id="hd-header" class="dark-mode">
     <div class="header-container wrap">
       <h1 class="logo"><a href="#"><span class="sound-only">현대첨단소재(HYUNDAI ADVANCED MATERIALS)</span></a></h1>
       <h2 class="sound-only">주 메뉴</h2>
@@ -86,7 +89,7 @@
   </header>
 
   <div id="hd-main">
-    <section class="main-section main-section-visual">
+    <section class="main-section main-section-visual wh">
       <h2 class="sound-only">메인 비주얼</h2>
       <div class="main-container visual-container">
         <ol class="visual-slider">

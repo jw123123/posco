@@ -1,4 +1,67 @@
 $(function () {
+  const hd = "#hd-header";
+  let viewportH = window.innerHeight;
+  let scTop = $(window).scrollTop();
+  // 각 섹션별 헤더디자인 구현(다크모드)
+  // 1. each()문법으로 완성
+  let sections = []; // 각 섹션별(.wh) 위치를 담을 배열
+  const updateSectionPos = () => { // 화살표 함수의 this는 부모를 의미(this를 선언해야하면 원래의 function 쓸 것)
+    //  function updateSectionPos() {}
+    sections = [];
+    $(".main-section.wh").each(function(){
+      sections.push({ //push - 배열에 쓸 수 있는 매서드(값을 집어넣는 문법)
+        top: $(this).offset().top,
+        bottom: $(this).offset().top +$(this).height()
+      }); 
+    });
+    // console.log(sections);
+  } 
+  updateSectionPos();
+  $(window).on("resize",updateSectionPos) // $(window) = 내장객체
+  // resize할때마다 update가 다시 실행되게 하는 문법
+  $(window).on("scroll", () => {
+    scTop = $(window).scrollTop();
+    let isDark = false; // 배경이 어두운 영역이 맞는지 확인
+    for(const section of sections){ // sections에 있는 것들 중 값을 section에 넣어서 꺼냄
+      if(scTop >= section.top && scTop < section.bottom){
+        isDark = true;
+        break; // 이 구간에 들어와 있는 동안에는 실행하지 말라는 문법
+      }
+    }
+    if(isDark == true){ // if(isDark == true) = if(isDark)
+      $(hd).addClass("dark-mode");
+    } else {
+      $(hd).removeClass("dark-mode");
+    }
+  });
+
+
+
+  // 2. 최대최소 구간 좌표 구해서 조건문으로 완성
+  // let secMin = [];
+  // let secMax = [];
+  // for(let i = 0; i < 5; i += 2 ){
+  //   secMin[i] = sec.eq(i).offset().top;
+  //   secMax[i] = sec.eq(i).offset().top + sec.eq(i).height();
+  // }
+  // console.log(secMin, secMax);
+  // $(window).scroll(function(){
+  //   scTop = $(window).scrollTop();
+  //   //console.log(scTop, secMin, secMax);
+  //   if(scTop >= secMin[0] && scTop < secMax[0]){ //어두운 섹션을 보고 있을 때
+  //     $(hd).addClass("dark-mode");
+  //   } else if(scTop >= secMin[2] && scTop < secMax[2]) {
+  //     $(hd).addClass("dark-mode");
+  //   } else if(scTop >= secMin[4] && scTop < secMax[4]) {
+  //     $(hd).addClass("dark-mode");
+  //   } else {
+  //     $(hd).removeClass("dark-mode");
+  //   }
+  // });
+
+
+
+  // 히어로 구현
   const visualBtn = ".visual-pagination button";
   const vSlide = ".v-slide";
   const vTxt = ".v-txt";

@@ -2,9 +2,16 @@ $(document).ready(function () {
   // 변수 선언
   // var = 광역변수(잘 안씀)
   const body = "body";
-  let viewportH, viewportW;
-  // 선언만 할 것
+  const hd = "#hd-header";
+  const ft = "#hd-footer";
+  let bodyHeight = $(body).height();
+  let viewportW = window.innerwidth; // 화면 크기 구하는 식 외울 것!!!
+  let viewportH = window.innerHeight;
   // viewport - 문서가 열리는 창의 크기
+  let scTop = $(window).scrollTop(); //화면이 스크롤되는 양
+  let hdHeight = $(hd).height(); //.height() = 앞의 타킷의 높이를 알아오게하는 문법
+  let ftHeight = $(ft).height();
+  let ftTop = $(ft).offset().top; // offset = 떨어진 거리를 구함 / 속성은 () 없음
   const mainMenu = ".depth1";
   const subMenu = ".depth2";
   let speed = 300; //고칠 수 없는 상수
@@ -15,13 +22,32 @@ $(document).ready(function () {
   const closedBtn = ".close-btn";
   const smMainMenu = ".sm-depth1 > a";
   const smSubMenu = ".sm-depth2";
-  
+
   //반응형 구현
   rwd();
   // 창의 크기가 조절되면
   $(window).resize(function () {
     rwd();
     smReset();
+    bodyHeight = $(body).height();
+    hdHeight = $(hd).height();
+    ftHeight = $(ft).height();
+  });
+
+  $(window).scroll(function () {
+    scTop = $(window).scrollTop(); //화면이 스크롤되는 양 업데이트
+    if (scTop > hdHeight) { // 화면에서 헤더가 보이지 않을 정도로 문서가 스크롤되면
+      $(hd).addClass("fixed");
+    } else {
+      $(hd).removeClass("fixed");
+    }
+
+    //푸터가 화면에 다 보일 때 쯤 헤더감추기
+    // if (scTop > bodyHeight - viewportH - 100) {
+    //   $(hd).fadeOut(speed);
+    // } else {
+    //   $(hd).fadeIn(speed);
+    // }
   });
 
 
@@ -64,10 +90,10 @@ $(document).ready(function () {
     $(body).removeClass("fixed");
     $(this).parent().removeClass("active");
   });
-  
+
 
   function rwd() {
-    viewportW = window.innerWidth;
+    viewportW = window.innerWidth;  //순수한 자바스크립트 문법
     viewportH = window.innerHeight;
     // console.log(viewportW, viewportH)
     // if(조건을 충족하면){실행}
@@ -85,4 +111,17 @@ $(document).ready(function () {
     // "style 속성을 찾아서 없애버리는 문법"
     //attribute - 속성으로 a href=""의 a 속성이 href=""인 것
   }
+
+  // 부드러운 스크롤
+  const lenis = new Lenis();
+  // const lenis = new Lenis( 혹시 스크롤 속도가 느리면 lerp:0.2수치를 높여서 사용
+  //   lerp: 0.2, (속도 조절)
+  //   smoothwheel:true,
+  //   smoothTouch: false
+  // );
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 });
