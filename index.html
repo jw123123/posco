@@ -4,55 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>현대첨단소재</title>
+  <title>포스코이앤씨</title>
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/common_rwd.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/lenis.min.js"></script> 
-  <!-- .min -> 프로덕트 버전으로 한줄로 나옴 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="js/lenis.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </head>
 
 <body>
-  <!-- h1.logo>a>span.sound-only>현대첨단소재(영어) / nav#hd-gnb>ol.hd-gnb>li.depth1>a+ul.depth2>li>a -->
-  <!-- 모바일 더보기 창 = inline 처리하면 됨 -->
-  <header id="hd-header" class="dark-mode">
+  <header id="pos-header">
     <div class="header-container wrap">
-      <h1 class="logo"><a href="#"><span class="sound-only">현대첨단소재(HYUNDAI ADVANCED MATERIALS)</span></a></h1>
+      <h1 class="logo"><a href="#"><span class="sound-only">포스코이앤씨</span></a></h1>
       <h2 class="sound-only">주 메뉴</h2>
-      <nav id="hd-gnb">
-        <ol class="hd-gnb">
+      <nav id="pos-gnb">
+        <ol class="pos-gnb">
           <li class="depth1">
-            <a href="#">COMPANY</a>
+            <a href="#">회사소개</a>
             <ul class="depth2">
-              <li><a href="#">회사소개</a></li>
-              <li><a href="#">연혁</a></li>
-              <!-- <li><a href="#">글로벌네트워크</a></li>
-              <li><a href="#">CEO 메세지</a></li> -->
+              <li><a href="#">경영비전</a></li>
+              <li><a href="#">재무정보</a></li>
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">글로벌 네트워크</a></li>
+              <li><a href="#">오시는 길</a></li>
             </ul>
           </li>
           <li class="depth1">
-            <a href="#">PRODUCT</a>
+            <a href="#">사업영역</a>
             <ul class="depth2">
-              <li><a href="#">소재별</a></li>
-              <li><a href="#">제품물성표</a></li>
-              <li><a href="#">Application</a></li>
-              <li><a href="#">CAE Support</a></li>
-              <li><a href="#">고객지원</a></li>
+              <li><a href="#">플랜트</a></li>
+              <li><a href="#">인프라</a></li>
+              <li><a href="#">건축</a></li>
+              <li><a href="#">미래신사업</a></li>
             </ul>
           </li>
           <li class="depth1">
-            <a href="#">LIBRARY</a>
+            <a href="#">지속가능경영</a>
             <ul class="depth2">
-              <li><a href="#">News</a></li>
-              <li><a href="#">회사소개서</a></li>
+              <li><a href="#">환경에너지 경영</a></li>
+              <li><a href="#">안전보건경영</a></li>
+              <li><a href="#">인권경영</a></li>
+              <li><a href="#">품질경영</a></li>
+              <li><a href="#">사회공헌</a></li>
+              <li><a href="#">윤리경영</a></li>
             </ul>
           </li>
           <li class="depth1">
-            <a href="#">CAREER</a>
+            <a href="#">미디어</a>
+            <ul class="depth2">
+              <li><a href="#">홍보자료</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+          <li class="depth1">
+            <a href="#">인재채용</a>
             <ul class="depth2">
               <li><a href="#">인재상</a></li>
               <li><a href="#">인사제도</a></li>
@@ -60,35 +73,17 @@
               <li><a href="#">채용안내</a></li>
             </ul>
           </li>
-          <li class="depth1">
-            <a href="#">ESG</a>
-            <ul class="depth2">
-              <li><a href="#">지속가능경영</a></li>
-              <li><a href="#">SHE 경영</a></li>
-              <li><a href="#">윤리준법경영</a></li>
-              <li><a href="#">사회공헌</a></li>
-              <li><a href="#">온라인 신고</a></li>
-            </ul>
-          </li>
         </ol>
       </nav>
       <h2 class="sound-only">유틸 메뉴</h2>
       <div class="util-menu">
         <button class="family-btn">Family Site</button>
-        <div class="lang-wrap">
-          <button class="lang-btn"><span class="sound-only">언어선택</span></button>
-          <ul class="lang-list">
-            <li><a href="#">KO</a></li>
-            <li><a href="#">EN</a></li>
-            <li><a href="#">CH</a></li>
-          </ul>
-        </div>
         <button class="sitemap-btn"><span class="sound-only">전체메뉴</span></button>
       </div>
     </div>
   </header>
 
-  <div id="hd-main">
+  <div id="pos-main">
     <section class="main-section main-section-visual wh">
       <h2 class="sound-only">메인 비주얼</h2>
       <div class="main-container visual-container">
@@ -132,58 +127,53 @@
           <button data-index="1">2</button>
           <button data-index="2">3</button>
         </div>
-        <div class="scroll">
-          <div class="emblem"></div>
-          <div class="mouse"></div>
-        </div>
       </div>
     </section>
 
     <section class="main-section main-section-product">
-      <h2 class="sound-only">제품</h2>
+      <h2 class="sound-only">사업소개</h2>
       <div class="main-container product-container wrap">
         <div class="product-overview">
-          <p>현대첨단소재(주)는<br>엔지니어링 플라스틱 분야의<br>선도 기업을 목표로</p>
-          <p>
-            2005년 8월 첫 컴파운딩 생산을 개시한 후 지속적으로<br>
-            기술 차별화와 생산 공정 합리화를 위해 노력하고 있으며,<br>
-            또한 다양한 자동차 부품 어플리케이션을 확보하여 고객을 확대하고 있습니다.
+          <p data-aos="fade-right" data-aos-duration="12000" data-aos-delay="100">공간을 향한 도전으로<br>세상에 가치를 더합니다.</p>
+          <p data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+            삶의 질 향상과 지속 가능한 성장을 위해,<br>
+            포스코이앤씨는 더 나은 세상을<br>
+            만드는 데 힘을 보태고 있습니다.
           </p>
         </div>
         <dl class="product-contents">
-          <div class="product-item product-item1">
+          <div class="product-item product-item1" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <a href="#">
-              <dt>소재별</dt>
+              <dt>플랜트</dt>
               <dd>
-                다양한 제품을 소재 특성별로 나누어 안내해 드립니다.
-                <div class="btn-arrow btn-blue"><span class="sound-only">더보기</span></div>
-                <!-- dt+dd 전체를 묶는 것은 가능 하지만 사이에 또는 dd 다음에 div 들어올 수 없음 -->
-              </dd>
-            </a>
-          </div>
-          <div class="product-item product-item2">
-            <a href="#">
-              <dt>소재별</dt>
-              <dd>
-                다양한 제품을 소재 특성별로 나누어 안내해 드립니다.
+                석유화학, 제철, 에너지 등 다양한 분야의 플랜트 설계 및 건설
                 <div class="btn-arrow btn-blue"><span class="sound-only">더보기</span></div>
               </dd>
             </a>
           </div>
-          <div class="product-item product-item3">
+          <div class="product-item product-item2" data-aos="fade-down" data-aos-duration="600" data-aos-delay="300">
             <a href="#">
-              <dt>소재별</dt>
+              <dt>건축</dt>
               <dd>
-                다양한 제품을 소재 특성별로 나누어 안내해 드립니다.
+                주거, 상업, 업무시설 등 고픔질 건축물 시공
                 <div class="btn-arrow btn-blue"><span class="sound-only">더보기</span></div>
               </dd>
             </a>
           </div>
-          <div class="product-item product-item4">
+          <div class="product-item product-item3" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
             <a href="#">
-              <dt>소재별</dt>
+              <dt>인프라</dt>
               <dd>
-                다양한 제품을 소재 특성별로 나누어 안내해 드립니다.
+                도로, 교량, 항만 등 국가 기반시설 건설 및 관리
+                <div class="btn-arrow btn-blue"><span class="sound-only">더보기</span></div>
+              </dd>
+            </a>
+          </div>
+          <div class="product-item product-item4" data-aos="fade-down" data-aos-duration="600" data-aos-delay="300">
+            <a href="#">
+              <dt>마래산업</dt>
+              <dd>
+                수소, 배터리, 친환경 에너지 등 신성장 동력 사업
                 <div class="btn-arrow btn-blue"><span class="sound-only">더보기</span></div>
               </dd>
             </a>
@@ -192,55 +182,91 @@
       </div>
     </section>
 
+    <section class="main-section main-section-result">
+      <h2 class="sound-only">대표실적</h2>
+      <div class="main-container result-container wrap swiper">
+        <ul class="result-contents swiper-wrapper">
+          <li class="result-item result-item1 swiper-slide">
+            <div>
+              <div class="result-title">송도 국제업무단지</div>
+              <div class="result-content">
+                대한민국 인천<br>
+                Smart City / Mixed-use / Landmark
+              </div>
+              <a href="#" class="result-btn">View More</a>
+            </div>
+          </li>
+          <li class="result-item result-item2 swiper-slide">
+            <div>
+              <div class="result-title">지도-임자 도로 (임자 1·2대교)</div>
+              <div class="result-content">
+                대한민국 전남<br>
+                Marine Infrastructure / Coastal Connectivity / Bridge Engineering
+              </div>
+              <a href="#" class="result-btn">View More</a>
+            </div>
+          </li>
+          <li class="result-item result-item3 swiper-slide">
+            <div>
+              <div class="result-title">폴란드 크라코프 소각로</div>
+              <div class="result-content">
+                폴란드 크라코프<br>
+                Waste-to-Energy / Sustainable Plant / Environmental Infrastructure
+              </div>
+              <a href="#" class="result-btn">View More</a>
+            </div>
+          </li>
+        </ul>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
     <section class="main-section main-section-esg wh">
       <h2 class="sound-only">지속가능경영</h2>
       <div class="main-container esg-container wrap">
-        <div class="h3-group">
-          <h3>Sustainability</h3>
+        <div class="h3-group" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+          <h3>지속가능경영</h3>
           <div class="h3-desc">
-            현대첨단소재는 환경경영, 투명경영, 윤리경영을 실천하며, 최고의 기업가치 창출을 통해 고객 및 주주 그리고 사회와 함께 꿈과 미래를 공유하여 세계를 이끌어가는 First Class 기업이 될
-            것을 약속드립니다.
+            포스코이앤씨는 환경·에너지를 회사경영의 핵심요소로 인식하고
+            지속가능한 친환경, 저탄소 경제 구현을 위하여 에너지를 줄이는 스마트한 건설로 친환경 미래사회를 만들어갑니다.
           </div>
         </div>
         <ul class="esg-contents">
           <li class="esg-item esg-item1">
             <a href="#">
-              <span>지속가능경영</span>
-              <div class="btn-arrow btn-wh">
-                <span class="sound-only">자세히보기</span>
-              </div>
+              <div>탄소중립</div>
+              <span>2050 탄소중립 달성 목표</span>
             </a>
           </li>
           <li class="esg-item esg-item2">
             <a href="#">
-              <span>SHE 경영</span>
-              <div class="btn-arrow btn-wh">
-                <span class="sound-only">자세히보기</span>
-              </div>
+              <div>신재생에너지</div>
+              <span>친환경 에너지 확대</span>
             </a>
           </li>
           <li class="esg-item esg-item3">
             <a href="#">
-              <span>윤리준법경영</span>
-              <div class="btn-arrow btn-wh">
-                <span class="sound-only">자세히보기</span>
-              </div>
+              <div>자원순환</div>
+              <span>폐기물 재활용 극대화</span>
             </a>
           </li>
           <li class="esg-item esg-item4">
             <a href="#">
-              <span>사회공헌</span>
-              <div class="btn-arrow btn-wh">
-                <span class="sound-only">자세히보기</span>
-              </div>
+              <div>안전보건</div>
+              <span>무재해 사업장 구현</span>
             </a>
           </li>
           <li class="esg-item esg-item5">
             <a href="#">
-              <span>온라인 신고</span>
-              <div class="btn-arrow btn-wh">
-                <span class="sound-only">자세히보기</span>
-              </div>
+              <div>인재육성</div>
+              <span>지속가능한 인재 개발</span>
+            </a>
+          </li>
+          <li class="esg-item esg-item6">
+            <a href="#">
+              <div>사회공헌</div>
+              <span>지역사회 가치 창출</span>
             </a>
           </li>
         </ul>
@@ -252,29 +278,25 @@
       <div class="main-container news-container wrap">
         <div class="h3-group">
           <h3>News</h3>
-          <div class="h3-desc">지구를 지키는 가벼운 한 걸음, 현대첨단소재가 만들어 갑니다.</div>
+          <div class="h3-desc">최근 주목받고 있는 포스코이앤씨의 주요 소식을 전해드립니다.</div>
+          <button class="news-btn">더보기</button>
         </div>
-        <div class="news-controls">
-          <button class="btn-control btn-prev">prev</button>
-          <span class="divider"><span class="sound-only">구분선</span></span>
-          <button class="btn-control btn-next">next</button>
-        </div>
-        <div class="news-slider-wrap">
-          <div class="news-slider">
-            <div class="news-slide">
-              <span class="img"><img src="images/sustainBg.jpg" alt=""></span>
-              <span class="subject">1.현대첨단소재, 공식 홈페이지 전면 리뉴얼 오픈</span>
-              <span class="date">2025.07.21</span>
-            </div>
-            <div class="news-slide">
-              <span class="img"><img src="images/sustainBg.jpg" alt=""></span>
-              <span class="subject">2.현대첨단소재, 공식 홈페이지 전면 리뉴얼 오픈</span>
-              <span class="date">2025.07.21</span>
-            </div>
-            <div class="news-slide">
+        <div class="news-slider-wrap swiper">
+          <div class="news-slider swiper-wrapper">
+            <div class="news-slide swiper-slide">
               <span class="img"><img src="images/news1.jpg" alt=""></span>
-              <span class="subject">3.현대첨단소재, 공식 홈페이지 전면 리뉴얼 오픈</span>
-              <span class="date">2025.07.21</span>
+              <span class="subject">송도 IBD 마지막 ‘더샵 송도그란테르’ 분양 돌입</span>
+              <span class="date">2026.05.12</span>
+            </div>
+            <div class="news-slide swiper-slide">
+              <span class="img"><img src="images/news2.jpg" alt=""></span>
+              <span class="subject">신반포 청구 리모델링에 ‘고·저층 전환형 평면’ 적용… 조망·주거가치 동시 확보</span>
+              <span class="date">2026.05.07</span>
+            </div>
+            <div class="news-slide swiper-slide">
+              <span class="img"><img src="images/news3.jpg" alt=""></span>
+              <span class="subject">대전 관저동 '더샵 관저아르테' 견본주택 개관</span>
+              <span class="date">2026.04.29</span>
             </div>
           </div>
         </div>
@@ -283,12 +305,11 @@
 
     <section class="main-section main-section-cs wh">
       <h2 class="sound-only">고객상담과 인재채용</h2>
-      <div class="main-container cs-container">
+      <div class="main-container cs-container" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
         <div class="cs-item cs-center">
           <a href="#" class="cs-inner">
             <h3>
-              <span class="kr">고객지원</span>
-              <span class="en">Customer Center</span>
+              <span class="kr">고객센터</span>
             </h3>
             <div class="h3-desc">궁금한 사항이 있으시면 언제든지 문의해 주세요.</div>
             <div class="btn-arrow btn-line"><span class="sound-only">더보기</span></div>
@@ -298,77 +319,91 @@
           <a href="#" class="cs-inner">
             <h3>
               <span class="kr">인재채용</span>
-              <span class="en">Career</span>
             </h3>
-            <div class="h3-desc">현대첨단소재와 함께하실 인재를 모십니다.</div>
+            <div class="h3-desc">포스코이앤씨와 함께 미래를 만들어갈 인재를 찾습니다.</div>
             <div class="btn-arrow btn-line"><span class="sound-only">더보기</span></div>
           </a>
         </div>
       </div>
     </section>
   </div>
-  <footer id="hd-footer">
+  <footer id="pos-footer">
     <div class="ft-container wrap">
       <div class="ft-wrap">
         <div class="ft-info-wrap">
+          <div class="ft-logo"><img src="images/logo.png" alt="포스코이앤씨 로고"></div>
           <div class="ft-policy">
-            <a href="">개인정보처리방침</a>
-            <a href="">제품 물성표</a>
-            <a href="">고객지원</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">영상정보처리기기 운영ㆍ관리 방침</a>
           </div>
-          <div class="company-addr">경기도 화성시 양감면 은행나무로62번길 35-2</div>
+          <div class="company-addr">(우)37745 경상북도 포항시 북구 중흥로 307</div>
           <dl class="ft-info">
             <div>
-              <dt>TEL</dt>
-              <dd><a href="tel:031-352-0800">031-352-0800</a></dd>
+              <dt>대표</dt>
+              <dd>송치영</dd>
             </div>
             <div>
-              <dt>FAX</dt>
-              <dd><a href="tel:031-352-0899">031-352-0899</a></dd>
+              <dt>대표전화</dt>
+              <dd><a href="tel:054-223-6114">054-223-6114, 032-748-2114</a></dd>
             </div>
             <div>
-              <dt>E-MAIL</dt>
-              <dd><a href="mailto:help@hyundai-am.com">help@hyundai-am.com</a></dd>
+              <dt>사업자등록번호</dt>
+              <dd>506-81-00280</dd>
             </div>
           </dl>
         </div>
-        <div class="ft-qr"><img src="images/qr_code.jpg" alt="QR코드 스캔"></div>
+        <div class="sns">
+          <div><img src="images/icon-youtube.svg" alt="유튜브" class="youtube"></div>
+          <div><img src="images/icon-instagram.svg" alt="인스타그램" class="insta"></div>
+        </div>
         <a href="#" class="gototop"><span class="sound-only">위로가기</span></a>
       </div>
-      <div class="copy">Copyright &copy; Hyundai Advanced Materials.<br> All rights reserved.</div>
+      <div class="copy">Copyright &copy; POSCO E&C. All rights reserved.</div>
     </div>
   </footer>
   <nav class="sitemap whitebox">
     <button class="close-btn icon-btn"><span class="sound-only">닫기</span></button>
     <ol class="sm-mo-gnb">
       <li class="sm-depth1">
-        <a href="#">COMPANY</a>
+        <a href="#">회사소개</a>
         <ul class="sm-depth2">
-          <li><a href="#">회사소개</a></li>
-          <li><a href="#">연혁</a></li>
-          <li><a href="#">글로벌네트워크</a></li>
-          <li><a href="#">CEO 메세지</a></li>
+          <li><a href="#">경영비전</a></li>
+          <li><a href="#">재무정보</a></li>
+          <li><a href="#">인사말</a></li>
+          <li><a href="#">글로벌 네트워크</a></li>
+          <li><a href="#">오시는 길</a></li>
         </ul>
       </li>
       <li class="sm-depth1">
-        <a href="#">PRODUCT</a>
+        <a href="#">사업영역</a>
         <ul class="sm-depth2">
-          <li><a href="#">소재별</a></li>
-          <li><a href="#">제품물성표</a></li>
-          <li><a href="#">Application</a></li>
-          <li><a href="#">CAE Support</a></li>
-          <li><a href="#">고객지원</a></li>
+          <li><a href="#">플랜트</a></li>
+          <li><a href="#">인프라</a></li>
+          <li><a href="#">건축</a></li>
+          <li><a href="#">미래신사업</a></li>
         </ul>
       </li>
       <li class="sm-depth1">
-        <a href="#">LIBRARY</a>
+        <a href="#">지속가능경영</a>
         <ul class="sm-depth2">
-          <li><a href="#">News</a></li>
-          <li><a href="#">회사소개서</a></li>
+          <li><a href="#">환경에너지 경영</a></li>
+          <li><a href="#">안전보건경영</a></li>
+          <li><a href="#">인권경영</a></li>
+          <li><a href="#">품질경영</a></li>
+          <li><a href="#">사회공헌</a></li>
+          <li><a href="#">윤리경영</a></li>
         </ul>
       </li>
       <li class="sm-depth1">
-        <a href="#">CAREER</a>
+        <a href="#">미디어</a>
+        <ul class="sm-depth2">
+          <li><a href="#">홍보자료</a></li>
+          <li><a href="#">보도자료</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </li>
+      <li class="sm-depth1">
+        <a href="#">인재채용</a>
         <ul class="sm-depth2">
           <li><a href="#">인재상</a></li>
           <li><a href="#">인사제도</a></li>
@@ -376,59 +411,71 @@
           <li><a href="#">채용안내</a></li>
         </ul>
       </li>
-      <li class="sm-depth1">
-        <a href="#">ESG</a>
-        <ul class="sm-depth2">
-          <li><a href="#">지속가능경영</a></li>
-          <li><a href="#">SHE 경영</a></li>
-          <li><a href="#">윤리준법경영</a></li>
-          <li><a href="#">사회공헌</a></li>
-          <li><a href="#">온라인 신고</a></li>
-        </ul>
-      </li>
-      <li class="sm-depth1 last"><span class="sound-only">현대로고</span></li>
+      <li class="sm-depth1 last"><span class="sound-only">포스코로고</span></li>
     </ol>
   </nav>
   <div class="family-site whitebox">
     <button class="close-btn icon-btn"><span class="sound-only">닫기</span></button>
     <h2 class="sound-only">패밀리사이트</h2>
     <div class="fm-wrap">
-      <ul class="fm-list">
-        <div class="fm-depth1">자동차·자동차부품</div>
-        <li><a href="#">현대자동차</a></li>
-        <li><a href="#">기아자동차</a></li>
-        <li><a href="#">현대모비스</a></li>
-        <li><a href="#">현대위아</a></li>
-        <li><a href="#">현대케피코</a></li>
-        <li><a href="#">현대아이에이치엘</a></li>
-        <li><a href="#">현대파텍스</a></li>
-      </ul>
-      <ul class="fm-list">
-        <div class="fm-depth1">건설</div>
-        <li><a href="#">현대건설</a></li>
-        <li><a href="#">현대엔지니어링</a></li>
-        <li><a href="#">현대스틸산업</a></li>
-        <li><a href="#">현대도시개발</a></li>
-      </ul>
-      <ul class="fm-list">
+      <div class="fm-list">
         <div class="fm-depth1">철강</div>
-        <li><a href="#">현대제철</a></li>
-        <li><a href="#">현대비앤지스틸</a></li>
-        <li><a href="#">현대종합특수강</a></li>
-      </ul>
-      <ul class="fm-list">
-        <div class="fm-depth1">서비스</div>
-        <li><a href="#">현대머티리얼</a></li>
-        <li><a href="#">현대글로비스</a></li>
-        <li><a href="#">현대로템</a></li>
-        <li><a href="#">이노션 월드와이드</a></li>
-        <li><a href="#">해비지호텔&리조트</a></li>
-        <li><a href="#">현대오토에버</a></li>
-        <li><a href="#">현대서산농장</a></li>
-        <li><a href="#">현대카드</a></li>
-        <li><a href="#">현대캐피탈</a></li>
-        <li><a href="#">푸본현대생명</a></li>
-      </ul>
+        <ul class="fm-depth2">
+          <li><a href="#">포스코</a></li>
+          <li><a href="#">포스코스틸리온</a></li>
+          <li><a href="#">SNNC</a></li>
+          <li><a href="#">포스코엠텍</a></li>
+          <li><a href="#">엔투비</a></li>
+          <li><a href="#">포스코휴먼스</a></li>
+          <li><a href="#">포스코IH</a></li>
+          <li><a href="#">PNR</a></li>
+          <li><a href="#">포스코PS테크</a></li>
+          <li><a href="#">포스코PR테크</a></li>
+          <li><a href="#">포스코PH솔루션</a></li>
+          <li><a href="#">포스코GYS테크</a></li>
+          <li><a href="#">포스코GYR테크</a></li>
+          <li><a href="#">포스코GY솔루션</a></li>
+        </ul>
+      </div>
+      <div class="fm-list">
+        <div class="fm-depth1">친환경인프라</div>
+        <ul class="fm-depth2">
+          <li><a href="#">포스코인터내셔널</a></li>
+          <li><a href="#">포스코DX</a></li>
+          <li><a href="#">포스코플로우</a></li>
+          <li><a href="#">포스코모빌리티솔루션</a></li>
+          <li><a href="#">포스코와이드</a></li>
+          <li><a href="#">포스코A&C</a></li>
+        </ul>
+      </div>
+      <div class="fm-list">
+        <div class="fm-depth1">친환경미래소재</div>
+        <ul class="fm-depth2">
+          <li><a href="#">포스코퓨처엠</a></li>
+          <li><a href="#">포스코MC머티리얼즈</a></li>
+          <li><a href="#">포스코필바라리튬솔루션</a></li>
+          <li><a href="#">포스코HY클린메탈</a></li>
+          <li><a href="#">피앤오케미칼</a></li>
+          <li><a href="#">포스코리튬솔루션</a></li>
+          <li><a href="#">포스코실리콘솔루션</a></li>
+        </ul>
+      </div>
+      <div class="fm-list">
+        <div class="fm-depth1">재단 및 기타</div>
+        <ul class="fm-depth2">
+          <li><a href="#">미래기술연구원</a></li>
+          <li><a href="#">RIST</a></li>
+          <li><a href="#">포스코경영연구원</a></li>
+          <li><a href="#">포스코인재창조원</a></li>
+          <li><a href="#">포스코기술투자</a></li>
+          <li><a href="#">포항공과대학교</a></li>
+          <li><a href="#">포스코청암재단</a></li>
+          <li><a href="#">포스웰</a></li>
+          <li><a href="#">포스코교육재단</a></li>
+          <li><a href="#">포스코1%나눔재단</a></li>
+          <li><a href="#">포스코미술관</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

@@ -1,20 +1,20 @@
 $(document).ready(function () {
+  AOS.init();
+
   // 변수 선언
-  // var = 광역변수(잘 안씀)
   const body = "body";
-  const hd = "#hd-header";
-  const ft = "#hd-footer";
+  const hd = "#pos-header";
+  const ft = "#pos-footer";
   let bodyHeight = $(body).height();
-  let viewportW = window.innerwidth; // 화면 크기 구하는 식 외울 것!!!
+  let viewportW = window.innerwidth;
   let viewportH = window.innerHeight;
-  // viewport - 문서가 열리는 창의 크기
-  let scTop = $(window).scrollTop(); //화면이 스크롤되는 양
-  let hdHeight = $(hd).height(); //.height() = 앞의 타킷의 높이를 알아오게하는 문법
+  let scTop = $(window).scrollTop();
+  let hdHeight = $(hd).height();
   let ftHeight = $(ft).height();
-  let ftTop = $(ft).offset().top; // offset = 떨어진 거리를 구함 / 속성은 () 없음
+  let ftTop = $(ft).offset().top;
   const mainMenu = ".depth1";
   const subMenu = ".depth2";
-  let speed = 300; //고칠 수 없는 상수
+  let speed = 300; 
   const smBtn = ".sitemap-btn";
   const sitemap = ".sitemap";
   const familySite = ".family-site";
@@ -25,7 +25,7 @@ $(document).ready(function () {
 
   //반응형 구현
   rwd();
-  // 창의 크기가 조절되면
+
   $(window).resize(function () {
     rwd();
     smReset();
@@ -35,33 +35,21 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    scTop = $(window).scrollTop(); //화면이 스크롤되는 양 업데이트
-    if (scTop > hdHeight) { // 화면에서 헤더가 보이지 않을 정도로 문서가 스크롤되면
+    scTop = $(window).scrollTop(); 
+    if (scTop > hdHeight) {
+      $(hd).addClass("fixed");
       $(hd).addClass("fixed");
     } else {
       $(hd).removeClass("fixed");
     }
-
-    //푸터가 화면에 다 보일 때 쯤 헤더감추기
-    // if (scTop > bodyHeight - viewportH - 100) {
-    //   $(hd).fadeOut(speed);
-    // } else {
-    //   $(hd).fadeIn(speed);
-    // }
   });
 
-
-  // 언어선택 : 언어선택 버튼을 클릭하면 언어리스트가 슬라이드(토글)
-  $(".lang-btn").click(function () {
-    $(this).next().slideToggle(speed);
-  });
-  // PC GNB구현 : depth1에 마우스가 진입하면 depth2가 슬라이드다운
+  // GNB 슬라이드다운
   $(mainMenu).mouseenter(function () {
     $(this).children(subMenu).stop().slideDown(speed);
   });
   $(mainMenu).mouseleave(function () {
     $(this).children(subMenu).stop().slideUp(speed);
-    // 애니메이션 메소드들(slideDown 등)은 앞에 stop()을 꼭 써야함(아니면 애니메이션들이 쌓임)
   });
 
   // 사이트맵, 모바일 GNB구현
@@ -124,4 +112,8 @@ $(document).ready(function () {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+
+
+
 });

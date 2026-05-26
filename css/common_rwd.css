@@ -5,17 +5,69 @@
   html {
     font-size: 9px;
   }
-
-  .ft-qr img {
-  width: 4.8rem;
-}
 }
 
 /* 2. mo */
 @media screen and (max-width: 767px) {}
 
 /* 3. tb~ */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+/* 헤더 */
+.util-menu {
+  font-size: 1.6rem;
+}
+
+.family-btn {
+  height: 3.4rem;
+  padding: 0 1.5rem;
+}
+/* 사이트맵 */
+.sitemap-btn:before {
+  font-size: 3rem;
+}
+
+/* 패밀리사이트 */
+.family-site {
+      height: calc(100% - 18rem);
+}
+.fm-list {
+  width: 65%;
+
+}
+.fm-list:nth-child(2), .fm-list:nth-child(3) {
+  width: 32%;
+}
+
+
+
+  /* 푸터 */
+  .ft-logo{
+  position: absolute;
+  right: 16px;
+  top: 0;
+  width: 20%;
+}
+.ft-logo img{
+  width: 100%;
+}
+.sns {
+  position: absolute;
+  right: 16px;
+  top: 20%;
+}
+.youtube, .insta{
+    width: 48px;
+  height: 48px;
+}
+
+.gototop {
+  right: 16px;
+    top: inherit;
+    bottom: 0;
+}
+
+
+}
 
 /* 4. only tb */
 @media screen and (min-width: 768px) and (min-width: 1279px) {}
@@ -26,82 +78,111 @@
     font-size: 12px;
   }
 
-
-  #hd-header {
-    height: 9rem;
+/* 헤더 */
+  #pos-header {
+    height: 6rem;
   }
 
   .logo {
     width: 14rem;
   }
 
-  #hd-gnb {
+  #pos-gnb {
     display: block;
   }
 
   .depth1 {
     width: 14rem;
   }
-  .sm-mo-gnb {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .util-menu {
+    font-size: 1.4rem;
+    align-items: center;
   }
-  .sm-depth1 {
-    width: 31%;
-    padding: 3rem;
-  }
-
-  .last {
-  display: block;
-  background: var(--primary-color) url(../images/logoWh.svg) center center /60% no-repeat;
-  /* background: 배경색 배경이미지 좌표/사이즈 반복; */
-  }
-  .sm-depth2 {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.6rem;
-  }
-  .sm-depth2 li {
-    width: 50%;
-  }
-
   .util-menu *::before {
     font-size: 2.6rem;
   }
+  .sitemap-btn:before {
+    font-size: 3.5rem;
+  }
+  
+  
+  /* 푸터 */
+  .ft-logo{
+    right: 96px;
+    width: 10%;
+  }
+  
+.ft-wrap{
+  padding-bottom: 6rem;
+}
+.ft-info {
+  display: flex;
+  gap: 4rem;
+}
 
-  .ft-wrap{
-    padding-bottom: 6rem;
-  }
-  .ft-info {
-    display: flex;
-    gap: 4rem;
-  }
-  .ft-qr {
-  bottom: inherit;
-  top: 0;
-  }
-  .ft-qr img {
-    width: 8rem;
-  }
-  .gototop {
-    top: inherit;
-    bottom: 0;
-  }
-  .copy br {
-    display: none;
-  }
+.sns {
+  right: 96px;
+}
 
-  .whitebox {
-    height: inherit;
-    width: 90%;
-    max-width: 180rem;
-    padding: 6rem 4rem;
-  }
-  .close-btn {
-    right: 4rem;
-    top: 2rem;
-  }
+.gototop {
+  right: 96px;
+}
+.copy br {
+  display: none;
+}
+
+/* 사이트맵 */
+.whitebox {
+  height: inherit;
+  width: 90%;
+  max-width: 180rem;
+  padding: 6rem 4rem;
+}
+.close-btn {
+  right: 4rem;
+  top: 2rem;
+}
+.sm-depth1 > a:after{
+  display: none;
+}
+.sm-depth2 {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.sm-depth2 li {
+  width: 50%;
+}
+.sm-mo-gnb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sm-depth1 {
+  width: 31%;
+  padding: 3rem;
+}
+
+.last {
+display: block;
+background: url(../images/site_logo.png) center center / 80% no-repeat;
+}
+
+/* 패밀리 사이트 */
+.fm-wrap {
+  flex-wrap: nowrap;
+}
+
+.fm-list:nth-child(2), .fm-list:nth-child(3) {
+  width: 45%;
+}
+.fm-depth1 {
+  font-size: 2rem;
+}
+.fm-list a {
+  font-size: 0.9em;
+}
 }
 
 /* 6. laptop 1440~ */
