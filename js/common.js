@@ -56,11 +56,8 @@ $(document).ready(function () {
 
   $(smMainMenu).click(function () {
     if (!$(body).hasClass("pc")) {
-      // ! = not의 의미로 반대 속성 조건문 쓸 때 필요
       $(this).parent().siblings().find(smSubMenu).slideUp(300);
       $(this).next().slideToggle(300);
-      // slideToggle - 너비는 건들지 않고 높이만 조절
-      // show - 너비, 높이 다 같이 조절해서 초 넣으면 이상하게 보임
     }
   });
 

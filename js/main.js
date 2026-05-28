@@ -4,17 +4,15 @@ $(function () {
   let viewportH = window.innerHeight;
   let scTop = $(window).scrollTop();
   // 각 섹션별 헤더디자인 구현(다크모드)
-  let sections = []; // 각 섹션별(.wh) 위치를 담을 배열
-  const updateSectionPos = () => { // 화살표 함수의 this는 부모를 의미(this를 선언해야하면 원래의 function 쓸 것)
-    //  function updateSectionPos() {}
+  let sections = [];
+  const updateSectionPos = () => { 
     sections = [];
     $(".main-section.wh").each(function () {
-      sections.push({ //push - 배열에 쓸 수 있는 매서드(값을 집어넣는 문법)
+      sections.push({ 
         top: $(this).offset().top,
         bottom: $(this).offset().top + $(this).height()
       });
     });
-    // console.log(sections);
   }
   updateSectionPos();
   $(window).on("resize", updateSectionPos) // $(window) = 내장객체

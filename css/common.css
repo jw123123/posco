@@ -257,6 +257,9 @@ button:focus {
 #pos-header.fixed .logo > a {
   background: url('../images/logo.png') left center / contain no-repeat;
 }
+#pos-header.fixed .sitemap-btn:before {
+  color: var(--primary-font-color);
+}
 
 #pos-header a {
   transition: var(--speed);
@@ -366,6 +369,7 @@ button:focus {
   content: '\e5d2';
   font-family: var(--google-icon);
   font-size: 2.4rem;
+  color: #fff;
 }
 
 

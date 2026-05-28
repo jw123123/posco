@@ -90,21 +90,12 @@
   font-size: 4.5rem;
   font-weight: bold;
   line-height: 1.2;
-  opacity: 0;
 }
 
 .txt-s {
   font-size: 2rem;
-  opacity: 0;
 }
 
-.animate .txt {
-  animation: mask-slogan-ani 4s both infinite;
-}
-
-.animate .txt-s {
-  animation: mask-slogan-s-ani 4s both infinite;
-}
 
 .visual-pagination {
   position: absolute;
@@ -642,7 +633,9 @@
   }
 
   /* 실적영역 */
-  .result-container {}
+  .result-container {
+    width: 90%;
+  }
 
   .result-item {}
 
@@ -772,7 +765,7 @@
   }
 
   .txt {
-    font-size: 7.5rem;
+    font-size: 4rem;
   }
 
   .scroll {
@@ -799,7 +792,7 @@
 
 .result-item {
 
-  height: 80%;
+  height: 75%;
 
 }
 
