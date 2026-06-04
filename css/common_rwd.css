@@ -14,12 +14,12 @@
 @media screen and (min-width: 768px) {
 /* 헤더 */
 .util-menu {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 
 .family-btn {
   height: 3.4rem;
-  padding: 0 1.5rem;
+  padding: 0 1.8rem;
 }
 /* 사이트맵 */
 .sitemap-btn:before {
@@ -75,12 +75,11 @@
 /* 5. laptop 1280~ */
 @media screen and (min-width: 1280px) {
   html {
-    font-size: 12px;
+    font-size: 16px;
   }
 
 /* 헤더 */
   #pos-header {
-    height: 6rem;
   }
 
   .logo {
@@ -92,7 +91,7 @@
   }
 
   .depth1 {
-    width: 14rem;
+    width: 10rem;
   }
   .util-menu {
     font-size: 1.4rem;
@@ -194,6 +193,8 @@ background: url(../images/site_logo.png) center center / 80% no-repeat;
   .header-container {
     padding: 0 4rem;
   }
+  
+
 
   .util-menu {
     gap: 2rem;
@@ -201,5 +202,9 @@ background: url(../images/site_logo.png) center center / 80% no-repeat;
 
 }
 
-/* 6. laptop 1921~ */
-@media screen and (min-width: 1921px) {}
+/* 6. laptop 1920~ */
+@media screen and (min-width: 1920px) {
+    .depth1 {
+    width: 14rem;
+  }
+}

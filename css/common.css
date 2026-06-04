@@ -118,20 +118,15 @@ button {
   vertical-align: middle;
 }
 
-/* button, input[type=submit], input[type=button], input[type=reset] {
-  background-color: #ff0;
-  } */
-
 input:focus,
 button:focus {
   outline: 0;
-
 }
 
 /* 3. 공용클래스 */
 .wrap {
+    max-width: 1920px;
   /* 사이트 공통 너비 */
-  max-width: 160rem; /* 1920 */
   margin: 0 auto;
   padding: 0 1.6rem;
 }
@@ -240,11 +235,10 @@ button:focus {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 6rem;
   z-index: 100;
 }
 #pos-header.fixed {
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: #fff;
 }
@@ -264,6 +258,8 @@ button:focus {
 #pos-header a {
   transition: var(--speed);
 }
+
+
 
 .header-container {
   display: flex;
@@ -322,8 +318,9 @@ button:focus {
   width: 100%;
   padding: 14% 12%;
   border-radius: 1.3rem;
+  z-index: 50;
   background-color: var(--point-font-color);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .depth2 li {}
@@ -347,14 +344,14 @@ button:focus {
 .util-menu {
   display: flex;
   gap: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .family-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3rem;
+  height: 3.5rem;
   padding: 0 1.5rem;
   border-radius: 1.8rem;
   background-color: var(--primary-color);
@@ -601,7 +598,7 @@ font-size: 1.5em;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   gap: 0.5em;
-  max-height: 400px;
+  /* max-height: 400px; */
 }
 .fm-list {
   width: 100%;
@@ -636,3 +633,30 @@ font-size: 1.5em;
 .fm-list a {
   font-size: 0.9em;
 }
+
+/* 서브페이지 헤더 */
+.sub {
+  background-color: #fff;
+}
+
+.sub .logo a {
+  background-image: url(../images/logo.png);
+}
+
+.sub .depth1>a {
+
+  color: #000;
+
+}
+
+.sub .sitemap-btn:before {
+
+  color: #000;
+
+}
+
+
+
+
+
+

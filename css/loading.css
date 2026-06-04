@@ -1,0 +1,97 @@
+.stage{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  min-height:100vh;
+  background-image:url("../images/loading_bg.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.content{
+  position:relative;
+  text-align:center;
+  padding-bottom: 5%;
+}
+
+.loading-logo{
+  display:inline-block;
+  text-align:center;
+  margin-bottom:34px;
+}
+.loading-logo .wordmark{
+  font-weight:700;
+  font-size:48px;
+  letter-spacing:1px;
+  color:#fff;
+  line-height:1;
+}
+.loading-logo .small{
+  margin-top:8px;
+  font-weight:500;
+  font-size:22px;
+  letter-spacing:2px;
+  color:#eef2fb;
+}
+
+.divider{
+  position:relative;
+  width:340px;
+  max-width:70vw;
+  height:1px;
+  margin:0 auto 44px;
+  background:linear-gradient(90deg,
+    rgba(91,155,255,0) 0%,
+    rgba(91,155,255,0.55) 50%,
+    rgba(91,155,255,0) 100%);
+}
+.divider::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:10px; height:10px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:#5b9bff;
+  box-shadow:0 0 14px 4px rgba(91,155,255,0.8);
+}
+
+.lead{
+  font-size:30px;
+  font-weight:400;
+  color:#dfe6f5;
+  margin-bottom:18px;
+  letter-spacing:0.5px;
+}
+.headline{
+  font-size:58px;
+  font-weight:800;
+  line-height:1.2;
+  letter-spacing:-0.5px;
+  color:#fff;
+  margin-bottom:30px;
+}
+.headline em{
+  font-style:normal;
+  color: #2f7bff;
+}
+.desc{
+  font-size:17px;
+  line-height:1.7;
+  color: #9aa7c4;
+  font-weight:400;
+}
+
+
+/* 반응형 ---------------------------------------------- */
+@media (max-width:768px){
+  .content{ padding-top:14vh; }
+  .loading-logo .wordmark{ font-size:38px; }
+  .loading-logo .small{ font-size:18px; }
+  .lead{ font-size:22px; }
+  .headline{ font-size:38px; }
+  .desc{ font-size:14px; }
+}

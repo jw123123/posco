@@ -1,4 +1,6 @@
 $(function () {
+    AOS.init();
+
   const body = $("body");
   const hd = "#hd-header";
   let viewportH = window.innerHeight;
@@ -132,5 +134,20 @@ $(function () {
     }
   }
   });
+
+  
+  // 스플래쉬화면
+   const splash = document.querySelector('.splash');
+   const lastBlock = document.querySelector('.splash__block:last-child');
+   
+    setTimeout(() => {
+      splash.classList.add('hidden');
+    }, 1000);
+  
+      // 마지막 블록 올라간 후 완전 제거
+    lastBlock.addEventListener('transitionend', () => {
+      splash.style.display = 'none';
+    });
+
 
 }); 

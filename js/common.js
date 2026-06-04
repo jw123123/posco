@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  AOS.init();
+
 
   // 변수 선언
   const body = "body";
@@ -93,17 +93,10 @@ $(document).ready(function () {
 
   function smReset() {
     $(smSubMenu).attr("style", "");
-    // "style 속성을 찾아서 없애버리는 문법"
-    //attribute - 속성으로 a href=""의 a 속성이 href=""인 것
   }
 
   // 부드러운 스크롤
   const lenis = new Lenis();
-  // const lenis = new Lenis( 혹시 스크롤 속도가 느리면 lerp:0.2수치를 높여서 사용
-  //   lerp: 0.2, (속도 조절)
-  //   smoothwheel:true,
-  //   smoothTouch: false
-  // );
   function raf(time) {
     lenis.raf(time)
     requestAnimationFrame(raf);
@@ -111,6 +104,6 @@ $(document).ready(function () {
   requestAnimationFrame(raf);
 
 
-
-
+  
+  
 });
