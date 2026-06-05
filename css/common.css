@@ -126,7 +126,6 @@ button:focus {
 /* 3. 공용클래스 */
 .wrap {
     max-width: 1920px;
-  /* 사이트 공통 너비 */
   margin: 0 auto;
   padding: 0 1.6rem;
 }
@@ -236,6 +235,7 @@ button:focus {
   align-items: center;
   width: 100%;
   z-index: 100;
+  padding: 10px 0;
 }
 #pos-header.fixed {
   position: sticky;
@@ -291,14 +291,12 @@ button:focus {
 
 .depth1 {
   position: relative;
-  padding-top: 0.5rem;
 }
 
 .depth1>a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 14rem;
   height: 5rem;
   font-size: 0.9em;
   font-weight: 500;
@@ -313,14 +311,15 @@ button:focus {
 .depth2 {
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 100%;
   width: 100%;
   padding: 14% 12%;
   border-radius: 1.3rem;
   z-index: 50;
   background-color: var(--point-font-color);
-  font-size: 1.3rem;
+  font-size: 1rem;
+  transform: translateX(-50%);
 }
 
 .depth2 li {}
@@ -344,7 +343,6 @@ button:focus {
 .util-menu {
   display: flex;
   gap: 1rem;
-  font-size: 1.8rem;
 }
 
 .family-btn {

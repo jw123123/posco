@@ -14,7 +14,6 @@
 @media screen and (min-width: 768px) {
 /* 헤더 */
 .util-menu {
-  font-size: 2rem;
 }
 
 .family-btn {
@@ -77,13 +76,17 @@
   html {
     font-size: 16px;
   }
+  body{
+    font-size: 1.3rem;
+  }
 
 /* 헤더 */
   #pos-header {
+    padding: 0;
   }
 
   .logo {
-    width: 14rem;
+    width: 10rem;
   }
 
   #pos-gnb {
@@ -94,25 +97,32 @@
     width: 10rem;
   }
   .util-menu {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     align-items: center;
   }
-  .util-menu *::before {
-    font-size: 2.6rem;
-  }
-  .sitemap-btn:before {
-    font-size: 3.5rem;
-  }
+
+.family-btn {
+  height: 3rem;
+  padding: 0 1.5rem;
+}
+
+.sitemap-btn:before {
+  font-size: 2.5rem;
+}
   
   
   /* 푸터 */
+  #pos-footer{
+    font-size: 1rem;
+    padding: 4rem 0;
+  }
   .ft-logo{
     right: 96px;
     width: 10%;
   }
   
 .ft-wrap{
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 .ft-info {
   display: flex;
